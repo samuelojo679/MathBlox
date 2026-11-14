@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f7fb">
+    <meta name="description" content="A simple, friendly calculator for finding the area of a triangle.">
+    <title>Triangle Area Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="tri.js" defer></script>
+</head>
+
+<body>
+    <main class="app">
+        <header class="topbar">
+            <div class="brand-mark" aria-hidden="true">
+                <svg width="23" height="23" viewBox="0 0 24 24" fill="none">
+                    <rect x="4" y="4" width="6" height="6" rx="1.5" fill="currentColor" />
+                    <rect x="14" y="4" width="6" height="6" rx="1.5" fill="currentColor" opacity=".55" />
+                    <rect x="4" y="14" width="6" height="6" rx="1.5" fill="currentColor" opacity=".55" />
+                    <rect x="14" y="14" width="6" height="6" rx="1.5" fill="currentColor" />
+                </svg>
+            </div>
+            <div>
+                <div class="brand-name">MathBlox</div>
+                <div class="brand-caption">A little math, made simple</div>
+            </div>
+        </header>
+
+        <section class="workspace" aria-labelledby="page-title">
+            <div class="calculator">
+                <h1 id="page-title">Triangle area<br>calculator</h1>
+                <p class="intro">Find the space inside any triangle. Add its base and height, and we’ll do the rest.</p>
+
+                <form id="triangle-form" onsubmit="show(); return false;">
+                    <div class="field">
+                        <label class="field-label" for="tri-base">
+                            Base length
+                        </label>
+                        <div class="input-wrap">
+                            <input id="tri-base" name="base" type="number" min="0" step="any" placeholder="e.g. 12" inputmode="decimal" aria-describedby="measurement-hint" required>
+                            <span class="input-suffix" aria-hidden="true">units</span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="field-label" for="tri-height">
+                            Perpendicular height
+                        </label>
+                        <div class="input-wrap">
+                            <input id="tri-height" name="height" type="number" min="0" step="any" placeholder="e.g. 8" inputmode="decimal" aria-describedby="measurement-hint" required>
+                            <span class="input-suffix" aria-hidden="true">units</span>
+                        </div>
+                    </div>
+                    <p class="field-hint" id="measurement-hint">Use the same unit for both measurements.</p>
+
+                    <div class="field">
+                        <label class="field-label" for="unit">
+                            Measurement unit
+                        </label>
+                        <select id="unit" name="unit" class="unit-select">
+                            <option value="mm">Millimeters (mm)</option>
+                            <option value="cm" selected>Centimeters (cm)</option>
+                            <option value="m">Meters (m)</option>
+                        </select>
+                    </div>
+                    <p class="error-message" id="error-message" role="alert" aria-live="polite"></p>
+                    <button class="calculate-button" type="submit">
+                        Calculate area
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M3.3 8h9.4m-3.8-3.8L12.7 8l-3.8 3.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="result" aria-live="polite" aria-atomic="true">
+                    <span class="result-label">Your triangle’s area</span>
+                    <output class="result-value is-empty" id="display" for="tri-base tri-height">Your answer will appear here</output>
+                </div>
+            </div>
+
+            <aside class="visual-panel" aria-label="Triangle area formula and diagram">
+                <div class="formula">
+                    <span class="formula-label">Area formula</span>
+                    <span class="formula-expression">½ × base × height</span>
+                    <svg class="shape-diagram" viewBox="0 0 240 180" fill="none" aria-hidden="true">
+                        <path d="M45 142 145 35 195 142H45Z" fill="#efedff" stroke="#887cf0" stroke-width="2" stroke-linejoin="round" />
+                        <path d="M145 35v107" stroke="#6758e8" stroke-width="2" stroke-dasharray="5 5" />
+                        <path d="M145 132h10v10" stroke="#6758e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <text x="118" y="166" fill="#5142d2" font-family="DM Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">base</text>
+                        <text x="157" y="91" fill="#5142d2" font-family="DM Sans, sans-serif" font-size="14" font-weight="700">height</text>
+                    </svg>
+                </div>
+                <div class="tip">
+                    <svg class="tip-icon" width="17" height="17" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <path d="M9 1.8a5.4 5.4 0 0 0-3.3 9.67c.58.44.96 1.08 1.03 1.79h4.54c.07-.71.45-1.35 1.03-1.79A5.4 5.4 0 0 0 9 1.8ZM6.9 15h4.2m-3.5 1.2h2.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Height means the straight-up distance from the base to the opposite corner.</span>
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8bdcf3">
+    <meta name="description" content="Pick a shape and explore the fun of finding its area with MathBlox.">
+    <title>MathBlox — Play, Explore &amp; Learn Maths!</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="aquarium" aria-hidden="true">
+        <div class="sky-glow"></div>
+        <div class="cloud cloud-one"><i></i></div>
+        <div class="cloud cloud-two"><i></i></div>
+        <div class="cloud cloud-three"><i></i></div>
+        <div class="bird bird-one"><i></i><b></b></div>
+        <div class="bird bird-two"><i></i><b></b></div>
+        <div class="bird bird-three"><i></i><b></b></div>
+        <div class="water-surface"></div>
+        <div class="sunbeam beam-one"></div>
+        <div class="sunbeam beam-two"></div>
+        <div class="sunbeam beam-three"></div>
+
+        <div class="fish fish-one">
+            <svg viewBox="0 0 100 62" fill="none">
+                <path d="M22 31 4 14v34l18-17Z" fill="#ffb64d" />
+                <ellipse cx="49" cy="31" rx="31" ry="22" fill="#ff865d" />
+                <path d="M37 12c9 12 9 26 0 38" stroke="#ffd28a" stroke-width="5" stroke-linecap="round" />
+                <circle cx="66" cy="25" r="3" fill="#243f5b" />
+                <path d="M70 36c-4 4-8 4-12 1" stroke="#b94d58" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </div>
+        <div class="fish fish-two">
+            <svg viewBox="0 0 100 62" fill="none">
+                <path d="m76 31 19-16v32L76 31Z" fill="#f3dc65" />
+                <ellipse cx="49" cy="31" rx="31" ry="22" fill="#61d6c3" />
+                <path d="M60 12c-9 12-9 26 0 38" stroke="#b6f3dd" stroke-width="5" stroke-linecap="round" />
+                <circle cx="31" cy="25" r="3" fill="#243f5b" />
+                <path d="M27 36c4 4 8 4 12 1" stroke="#259a91" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </div>
+        <div class="fish fish-three">
+            <svg viewBox="0 0 100 62" fill="none">
+                <path d="m22 31-18-17v34l18-17Z" fill="#ff87ae" />
+                <ellipse cx="50" cy="31" rx="31" ry="22" fill="#8b83f4" />
+                <path d="M40 11c9 12 9 27 0 40" stroke="#c5c0ff" stroke-width="5" stroke-linecap="round" />
+                <circle cx="66" cy="25" r="3" fill="#243f5b" />
+                <path d="M70 36c-4 4-8 4-12 1" stroke="#5b50bf" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </div>
+        <div class="fish fish-four">
+            <svg viewBox="0 0 100 62" fill="none">
+                <path d="m76 31 19-16v32L76 31Z" fill="#ffa55f" />
+                <ellipse cx="49" cy="31" rx="31" ry="22" fill="#67b6ee" />
+                <path d="M58 12c-9 12-9 26 0 38" stroke="#bce9ff" stroke-width="5" stroke-linecap="round" />
+                <circle cx="31" cy="25" r="3" fill="#243f5b" />
+                <path d="M27 36c4 4 8 4 12 1" stroke="#408ac6" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </div>
+
+        <span class="bubble bubble-one"></span>
+        <span class="bubble bubble-two"></span>
+        <span class="bubble bubble-three"></span>
+        <span class="bubble bubble-four"></span>
+        <span class="bubble bubble-five"></span>
+        <span class="bubble bubble-six"></span>
+        <div class="plant plant-left"><i></i><i></i><i></i><i></i></div>
+        <div class="plant plant-right"><i></i><i></i><i></i><i></i></div>
+        <div class="coral coral-left"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="coral coral-right"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="sand"></div>
+    </div>
+
+    <main class="desktop">
+        <header class="topbar">
+            <a class="brand" href="./index.html" aria-label="MathBlox home">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" fill="none">
+                        <rect x="3" y="3" width="11" height="11" rx="3" fill="currentColor" />
+                        <rect x="18" y="3" width="11" height="11" rx="3" fill="currentColor" opacity=".58" />
+                        <rect x="3" y="18" width="11" height="11" rx="3" fill="currentColor" opacity=".58" />
+                        <rect x="18" y="18" width="11" height="11" rx="3" fill="currentColor" />
+                    </svg>
+                </span>
+                <span class="brand-copy">
+                    <span class="brand-name">MathBlox</span>
+                    <span class="brand-caption">Your Math Playground</span>
+                </span>
+            </a>
+        </header>
+
+        <section class="welcome" aria-labelledby="welcome-title">
+            <div class="welcome-copy">
+                <h1 id="welcome-title">Hello, Little<br class="desktop-break"> Mathematician<span class="title-sparkle" aria-hidden="true">!</span></h1>
+                <p class="subtitle">Play, Explore <span aria-hidden="true">&amp;</span> Learn Maths!</p>
+            </div>
+            <div class="mascot" role="img" aria-label="A happy little pencil mascot">
+                <span class="mascot-sparkle sparkle-one" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z" /></svg>
+                </span>
+                <span class="mascot-sparkle sparkle-two" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" /></svg>
+                </span>
+                <svg viewBox="0 0 136 148" fill="none" aria-hidden="true">
+                    <ellipse cx="70" cy="134" rx="43" ry="8" fill="#506c8c" opacity=".15" />
+                    <g transform="rotate(10 68 72)">
+                        <path d="m40 112 8 22 17-17" fill="#f7c77f" />
+                        <path d="m48 134 8-8-5-5-3 13Z" fill="#41536e" />
+                        <rect x="39" y="22" width="52" height="94" rx="18" fill="#ffd45c" />
+                        <path d="M39 42h52M39 101h52" stroke="#f4b740" stroke-width="4" />
+                        <path d="M39 38c0-9 7-16 16-16h20c9 0 16 7 16 16v8H39v-8Z" fill="#ff8f9e" />
+                        <path d="M39 38c0-9 7-16 16-16h20c9 0 16 7 16 16v8H39v-8Z" stroke="#f2758b" stroke-width="2" />
+                        <circle cx="57" cy="69" r="3.2" fill="#354968" />
+                        <circle cx="75" cy="69" r="3.2" fill="#354968" />
+                        <path d="M59 81c4 5 10 5 14 0" stroke="#e56d72" stroke-width="2.5" stroke-linecap="round" />
+                        <circle cx="49" cy="78" r="4" fill="#ff9b9d" opacity=".7" />
+                        <circle cx="83" cy="78" r="4" fill="#ff9b9d" opacity=".7" />
+                    </g>
+                    <path d="M95 93c9-4 14-1 16 5m-16-1c9 2 12 8 9 14" stroke="#ffd45c" stroke-width="5" stroke-linecap="round" />
+                    <path d="M47 111c-7 5-11 4-15-1m59 1c7 5 11 4 15-1" stroke="#ffd45c" stroke-width="5" stroke-linecap="round" />
+                </svg>
+                <span class="mascot-tag">Hi, friend!</span>
+            </div>
+        </section>
+
+        <section class="shape-picker" aria-labelledby="picker-title">
+            <div class="section-heading">
+                <div>
+                    <p class="instruction" id="picker-title">Which shape would you like to explore today?</p>
+                    <p class="section-note">Pick a shape and let’s calculate!</p>
+                </div>
+            </div>
+
+            <nav class="calculator-grid" aria-label="Area calculators">
+                <a class="calculator-card square-card" href="./Area%20of%20square/index.html">
+                    <span class="app-icon square-icon" aria-hidden="true">
+                        <svg viewBox="0 0 100 100" fill="none">
+                            <path d="M25 25h50v50H25z" fill="#fff" fill-opacity=".92" stroke="#e88f43" stroke-width="3" stroke-linejoin="round" />
+                            <path d="M31 31h38v38H31z" fill="#ffcf66" />
+                            <path d="M31 31h38v38H31z" stroke="#f4a94c" stroke-width="2" />
+                            <path d="M32 77h36M26 72v10m48-10v10" stroke="#d9853e" stroke-width="2.5" stroke-linecap="round" />
+                            <path d="m27 28 5-5m36 54 5-5" stroke="#fff4d5" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <span class="card-title">Square Calculator</span>
+                    <span class="card-description">Find the area of a square</span>
+                    <span class="open-label">Let’s go</span>
+                </a>
+
+                <a class="calculator-card circle-card" href="./Area%20of%20Circle/index.html">
+                    <span class="app-icon circle-icon" aria-hidden="true">
+                        <svg viewBox="0 0 100 100" fill="none">
+                            <circle cx="50" cy="50" r="29" fill="#fff" fill-opacity=".92" stroke="#6b9fe6" stroke-width="3" />
+                            <circle cx="50" cy="50" r="22" fill="#91c5ff" />
+                            <path d="M50 50 66 34" stroke="#477ac9" stroke-width="2.5" stroke-linecap="round" />
+                            <circle cx="50" cy="50" r="3" fill="#477ac9" />
+                            <circle cx="66" cy="34" r="3" fill="#477ac9" />
+                            <path d="M38 37a17 17 0 0 1 19-4" stroke="#dceeff" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <span class="card-title">Circle Calculator</span>
+                    <span class="card-description">Find the area of a circle</span>
+                    <span class="open-label">Let’s go</span>
+                </a>
+
+                <a class="calculator-card triangle-card" href="./Area%20of%20Triangle/index.html">
+                    <span class="app-icon triangle-icon" aria-hidden="true">
+                        <svg viewBox="0 0 100 100" fill="none">
+                            <path d="m50 21 32 55H18l32-55Z" fill="#fff" fill-opacity=".92" stroke="#58ad8d" stroke-width="3" stroke-linejoin="round" />
+                            <path d="m50 29 25 43H25l25-43Z" fill="#83d8aa" />
+                            <path d="m50 29 25 43H25l25-43Z" stroke="#54b58a" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M50 29v43m0-7h7v7" stroke="#328c74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3" />
+                            <path d="M32 65h12" stroke="#dcfff0" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <span class="card-title">Triangle Calculator</span>
+                    <span class="card-description">Find the area of a triangle</span>
+                    <span class="open-label">Let’s go</span>
+                </a>
+            </nav>
+            <p class="keyboard-hint">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="2.5" y="4.5" width="19" height="15" rx="3" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M6 9h1m3 0h1m3 0h1m3 0h1M6 13h1m3 0h1m3 0h1m3 0h1M8 16h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                Choose a shape to open its calculator
+            </p>
+        </section>
+
+        <footer class="footer">
+            <svg class="footer-shell" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 13.5c0-4.5 3.2-8 8-8s8 3.5 8 8c0 3-2.8 5-8 5s-8-2-8-5Z" fill="currentColor" opacity=".22" />
+                <path d="M4 13.5c0-4.5 3.2-8 8-8s8 3.5 8 8c0 3-2.8 5-8 5s-8-2-8-5Zm3.2 4.1 1-7.8m2.8 8.5v-9m2.8 9 1-8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            Learning Maths is Fun!
+            <svg class="footer-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z" />
+            </svg>
+        </footer>
+    </main>
+</body>
+
+</html>
